@@ -10,9 +10,8 @@ import { sendEmail } from "@/app/helpers/mailer";
 
 connect()
 
-
 export async function POST(request:NextRequest) {
-    
+
     try {
 
         const reqBody= await request.json() //req.body is a promise ,sin express it comes fast but nextjs run on edge so it takes time ->await use
