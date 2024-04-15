@@ -1,9 +1,16 @@
-import React from 'react'
+//this is for handling dynmic routes 
+//here profile/routes can be handeled
+//so we don't know what will come after profile/route 
 
-function page() {
-  return (
-    <div>PROFILE page</div>
-  )
+export default function UserProfile({params}: any) {
+    return (
+        <div className="flex flex-col items-center justify-center min-h-screen py-2">
+            <h1>Profile</h1>
+            <hr />
+            <p className="text-4xl">Profile page 
+            <span className=" p-2 ml-2 rounded bg-orange-500 text-black">{params.id}</span>
+            </p>
+
+            </div>
+    )
 }
-
-export default page
